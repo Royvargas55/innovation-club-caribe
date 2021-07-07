@@ -1,0 +1,15 @@
+{
+    "short_name": "Innovation Club - Caribe",
+    "name": "Innovation Club - Caribe",
+    "icons": [
+      {
+        "src": "assets/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#5D2E88",
+    "theme_color": "#5D2E88",
+    "display": "standalone"
+  }
