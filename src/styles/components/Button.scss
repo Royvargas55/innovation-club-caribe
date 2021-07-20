@@ -1,0 +1,29 @@
+@import "../index.scss";
+
+.button {
+  padding: 9px 0 16px 14px;
+  background: #2dab87;
+  border-style: none;
+  border-radius: 5px;
+  font-family: $IBM-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  text-align: center;
+  color: #ffffff;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.arrow {
+  margin: 0 20px 0 12px;
+}
+
+.icon {
+  position: relative;
+  top: 11.5px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 0;
+}
