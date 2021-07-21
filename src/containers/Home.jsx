@@ -12,7 +12,11 @@ const Home = () => {
 
     return (
         <div>
-            <h1 className='title'>Innovation Club - Caribe</h1>
+            <div className='title'>
+                <h2>31 de agosto</h2>
+                <h1>Día de la</h1>
+                <h1>Cultura Afrocostarricense</h1>
+            </div>
             <Button text='Comencemos' method={handleClick}></Button>            
         </div>
     )
