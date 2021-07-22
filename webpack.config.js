@@ -41,13 +41,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot|svg|mp4)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'fonts/'
+              outputPath: 'assets/'
             }
           }
         ]
@@ -67,6 +67,7 @@ module.exports = {
         { from: 'public/manifest.json', to: '' },
         { from: 'public/service-worker.js', to: '' },
         { from: 'public/icon.png', to: 'assets' },
+        { from: 'src/assets/video.mp4', to: 'assets' },
       ],
     }),
   ],

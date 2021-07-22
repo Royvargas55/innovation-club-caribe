@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// Components
 import Button from '../components/Button/Button'
 
 // Styles
@@ -17,7 +20,7 @@ const Home = () => {
                 <h1>Día de la</h1>
                 <h1>Cultura Afrocostarricense</h1>
             </div>
-            <Button text='Comencemos' method={handleClick}></Button>            
+            <Link to='/video'><Button text='Comencemos' method={handleClick}></Button>  </Link>          
         </div>
     )
 }
