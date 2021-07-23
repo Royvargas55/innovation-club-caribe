@@ -1,18 +1,19 @@
 @import "../index.scss";
 
-body {
+.home {
+  height: 100vh;
   background-color: $green-color;
-  font-family: $IBM-font;
-  color: white;
   text-align: center;
 }
 
-.title {
-  margin: 15px;
-  h1 {
+.home__title {
+  padding: 15px;
+  font-family: $IBM-font;
+  color: white;
+  .home__title__day {
     margin: 0%;
   }
-  h2 {
+  .home__title__date {
     font-weight: normal;
   }
 }

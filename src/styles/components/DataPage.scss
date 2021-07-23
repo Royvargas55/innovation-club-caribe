@@ -1,0 +1,24 @@
+@import "../index.scss";
+
+.data {
+  height: 100vh;
+  width: 100%;
+  font-family: $IBM-font;
+  color: #000000;
+  background: linear-gradient(180deg, #78fff7 0%, rgba(106, 255, 210, 0) 100%);
+}
+
+.data__form__inputs {
+  padding: 250px 0 0 189px;
+  .data__form__inputs__id {
+    margin-bottom: 13px;
+  }
+  .data__form__inputs__name {
+    margin: 47px 0 16px 0;
+  }
+}
+
+.data__button {
+  margin-top: 65px;
+  text-align: center;
+}

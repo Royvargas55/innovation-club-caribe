@@ -1,0 +1,23 @@
+@import "../index.scss";
+
+@mixin font-style-input {
+  font-family: $IBM-font;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 36px;
+  line-height: 47px;
+  color: #000000;
+}
+
+.input {
+  width: 529px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 5px solid #000000;
+  @include font-style-input;
+  &::placeholder {
+    @include font-style-input;
+  }
+}
