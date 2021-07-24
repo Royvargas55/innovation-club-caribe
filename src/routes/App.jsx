@@ -6,6 +6,8 @@ import Layout from '../components/Layout';
 import Home from '../containers/Home';
 import Video from '../containers/Video';
 import DataPage from '../containers/DataPage';
+import QuestionPage1 from '../containers/QuestionPage1';
+
 
 // Prototype configuration
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
@@ -27,6 +29,7 @@ const App = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/video" component={Video} />
           <Route exact path="/data-page" component={DataPage} />
+          <Route exact path="/question-1" component={QuestionPage1} />
         </Switch>
       </Layout>
     </BrowserRouter>

@@ -3,10 +3,10 @@ import React from 'react'
 // Styles
 import '../styles/components/Input.scss';
 
-const Input = ({placeholder}) => {
+const Input = ({placeholder, reference}) => {
     return (
         <>
-            <input className='input' type="text" placeholder={placeholder}/>
+            <input ref={reference} className='input' type="text" placeholder={placeholder}/>
         </>
     );
 };
