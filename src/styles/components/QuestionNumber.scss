@@ -1,0 +1,13 @@
+.container {
+  width: 150px;
+  height: 150px;
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  border-radius: 15px;
+  .container__number {
+    font-size: 96px;
+    line-height: 125px;
+    font-weight: bold;
+    text-align: center;
+  }
+}

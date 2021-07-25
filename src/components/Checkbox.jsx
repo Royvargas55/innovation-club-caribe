@@ -1,15 +1,28 @@
 import React from "react";
+import className from "classnames";
 
 // Styles
 import '../styles/components/Checkbox.scss';
 
-const Checkbox = ({message, handleOnChange}) => {
+const Checkbox = ({message, handleOnChange, checkboxName, checkboxValue, reference, radioButton, checked, disabled}) => {
+  const checkboxControlclassName = className('checkbox__control', {
+    radioButton
+  });
+
   return (
     <>
-      <label class="checkbox">
-        <span class="checkbox__input">
-          <input onChange={handleOnChange} type="checkbox" name="checkbox" />
-          <span class="checkbox__control">
+      <label className="checkbox">
+        <span className="checkbox__input">
+          <input 
+            onChange={handleOnChange} 
+            type="checkbox" 
+            name={checkboxName}
+            value={checkboxValue}
+            ref={reference}
+            checked={checked}
+            disabled={disabled}
+          />
+          <span className={checkboxControlclassName}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -25,7 +38,7 @@ const Checkbox = ({message, handleOnChange}) => {
             </svg>
           </span>
         </span>
-        <span class="radio__label">{message}</span>
+        <span className="radio__label">{message}</span>
       </label>
     </>
   );

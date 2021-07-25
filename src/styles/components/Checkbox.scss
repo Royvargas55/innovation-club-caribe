@@ -59,3 +59,12 @@
   font-weight: 300;
   font-size: 30px;
 }
+
+.radioButton {
+  border-radius: 100%;
+}
+
+input:checked + .radioButton {
+  transform: scale(1);
+  background-color: #058c7c;
+}

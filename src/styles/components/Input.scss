@@ -21,3 +21,10 @@
     @include font-style-input;
   }
 }
+
+.centerPlaceholder {
+  text-align: center;
+  &::placeholder {
+    text-align: center;
+  }
+}

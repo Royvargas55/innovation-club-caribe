@@ -51,6 +51,8 @@ const DataPage = () => {
                         <Checkbox 
                             handleOnChange={onChange}
                             message='Estoy de acuerdo con la política de uso de datos'
+                            checkboxName='agreements'
+                            checkboxValue='agree'
                         />
                     </div>
                 </div>

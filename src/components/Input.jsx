@@ -1,12 +1,18 @@
 import React from 'react'
+import classNames from 'classnames';
 
 // Styles
 import '../styles/components/Input.scss';
 
-const Input = ({placeholder, reference}) => {
+const Input = ({placeholder, reference, centerPlaceholder}) => {
+
+    const inputClass = classNames("input", {
+        centerPlaceholder
+    });
+
     return (
         <>
-            <input ref={reference} className='input' type="text" placeholder={placeholder}/>
+            <input ref={reference} className={inputClass} type="text" placeholder={placeholder}/>
         </>
     );
 };
