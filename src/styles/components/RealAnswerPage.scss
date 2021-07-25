@@ -1,0 +1,24 @@
+@import "../index.scss";
+
+.realanswer {
+  font-family: $IBM-font;
+  height: 100vh;
+  background: #058c7c;
+}
+
+.realanswer__content {
+  z-index: 10;
+  height: 100vh;
+  background: #ffbb70;
+  border-radius: 0px 323px 0px 0px;
+}
+
+.realanswer__title {
+  margin: 0;
+  text-align: center;
+  padding-top: 194px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 94px;
+}

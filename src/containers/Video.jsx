@@ -23,7 +23,7 @@ const Video = () => {
 
   return (
     <>
-      <div className="video">
+      <div className="video page">
         <h1 className="video__title">Termina el Video Para Continuar</h1>
         <video
           className="video__player"

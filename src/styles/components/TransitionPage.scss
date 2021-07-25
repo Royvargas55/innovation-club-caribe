@@ -1,0 +1,19 @@
+@import "../index.scss";
+
+.transition {
+  height: 100vh;
+  font-family: $IBM-font;
+  background: linear-gradient(180deg, #a7caff 0%, rgba(127, 106, 255, 0) 100%);
+  text-align: center;
+  font-family: $IBM-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 94px;
+}
+
+.transition__title {
+  margin: 0;
+  padding: 0;
+  padding-top: 350px;
+}

@@ -31,7 +31,7 @@ const DataPage = () => {
 
     return (
         <>
-            <div className='data'>
+            <div className='data page'>
                 <div className='data__form'>
                     <div className='data__form__inputs'>
                         <h1 className='data__form__inputs__id'>¿Cuál es tu número de cédula?</h1>

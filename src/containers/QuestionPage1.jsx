@@ -18,7 +18,7 @@ const QuestionPage1 = () => {
 
     return (
         <>
-            <div className='question'>
+            <div className='question page'>
                 <div className='question__number'>
                     <QuestionNumber number='1'/>
                 </div>

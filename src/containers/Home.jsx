@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className='home'>
+            <div className='home page'>
                 <div className='home__title'>
                     <h2 className='home__title__date'>31 de agosto</h2>
                     <h1 className='home__title__day'>Día de la</h1>

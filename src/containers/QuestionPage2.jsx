@@ -41,7 +41,7 @@ const QuestionPage2 = () => {
 
     return (
         <>
-             <div className='question'>
+             <div className='question page'>
                 <div className='question__number'>
                     <QuestionNumber number='2'/>
                 </div>
@@ -61,7 +61,7 @@ const QuestionPage2 = () => {
                     />
                 ))}
                 </div>
-                <Link to='/question-2'><Button method={handleClick} text='Continuar'></Button></Link>
+                <Link to='/transition-page'><Button method={handleClick} text='Continuar'></Button></Link>
             </div>
         </>
     );
