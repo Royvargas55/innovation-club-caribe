@@ -6,21 +6,29 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import Input from '../components/Input';;
 import Button from '../components/Button/Button';
 import Checkbox from '../components/Checkbox';
+import SelectionBoxes from '../components/SelectionBoxes';
 
 // Styles
 import '../styles/components/DataPage.scss';
 
 const DataPage = () => {
     const [showButton, setShowButton] = useState(false);
+    const [scholarship, setScholarship] = useState(false);
     const { setLocalStorage } = useLocalStorage('student', {});
     const inputId = useRef('');
     const inputName = useRef('');
+
+    const onChangeValue = (e) => {
+        setScholarship(e.target.value);
+        console.log(e.target.value);
+    }
+
 
     const handleClick = () => {
         const student = {
             'id': inputId.current.value,
             'name': inputName.current.value,
-            'scholarship': 'none',
+            'scholarship': scholarship,
         }
         setLocalStorage(student);
     }
@@ -46,14 +54,16 @@ const DataPage = () => {
                         />
                     </div>
                     <div className='data__form__group'>
-                        <h1>¿A qué grupo perteneces?</h1>
-                        {/*Botones*/}
-                        <Checkbox 
-                            handleOnChange={onChange}
-                            message='Estoy de acuerdo con la política de uso de datos'
-                            checkboxName='agreements'
-                            checkboxValue='agree'
-                        />
+                        <h1 className='data__form__group__title'>¿A qué grupo perteneces?</h1>
+                        <SelectionBoxes handleChangeValue={onChangeValue} />
+                        <div className='data__form__group__checkbox'>
+                            <Checkbox 
+                                handleOnChange={onChange}
+                                message='Estoy de acuerdo con la política de uso de datos'
+                                checkboxName='agreements'
+                                checkboxValue='agree'
+                            />
+                        </div>
                     </div>
                 </div>
                 {showButton &&

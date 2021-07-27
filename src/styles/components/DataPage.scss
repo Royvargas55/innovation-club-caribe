@@ -20,6 +20,12 @@
   }
   .data__form__group {
     padding: 250px 0 0 250px;
+    .data__form__group__title {
+      padding-left: 17px;
+    }
+    .data__form__group__checkbox {
+      padding-left: 18px;
+    }
   }
 }
 

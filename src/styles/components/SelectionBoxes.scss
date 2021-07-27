@@ -1,0 +1,33 @@
+@import "../index.scss";
+
+.selectionboxes {
+  position: relative;
+  display: flex;
+  margin-top: 27px;
+}
+
+.selectionboxes__input {
+  margin: 5px 15px 40px 0;
+}
+
+.selectionboxes__input label {
+  background: transparent;
+  padding: 0 29px;
+  border: 7px solid #000000;
+  font-family: $IBM-font;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 36px;
+  position: relative;
+  left: 1px;
+}
+
+.selectionboxes__input [type="radio"] {
+  opacity: 0;
+}
+
+[type="radio"]:checked ~ label {
+  background: #000000;
+  color: #ffffff;
+  font-weight: 500;
+}
