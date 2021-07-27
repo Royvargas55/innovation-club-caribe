@@ -1,19 +1,41 @@
-@import "../index.scss";
+@import '../index.scss';
+.home_container {
+  background: $green-color;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  overflow-y: hidden;
+  height: 100vh;
+}
+.rails {
+  position: absolute;
+  height: 100vh;
+  max-height: 100vh;
+  margin-left: -3%;
+}
+
+.page {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
 
 .home {
   height: 100vh;
   background-color: $green-color;
   text-align: center;
+  display: grid;
+  align-content: center;
 }
 
 .home__title {
   padding: 15px;
   font-family: $IBM-font;
   color: white;
+  font-size: 34px;
   .home__title__day {
     margin: 0%;
   }
   .home__title__date {
     font-weight: normal;
+    font-size: 28px;
   }
 }

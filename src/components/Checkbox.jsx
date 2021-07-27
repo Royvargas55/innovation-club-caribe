@@ -1,21 +1,30 @@
-import React from "react";
-import className from "classnames";
+import React from 'react';
+import className from 'classnames';
 
 // Styles
 import '../styles/components/Checkbox.scss';
 
-const Checkbox = ({message, handleOnChange, checkboxName, checkboxValue, reference, radioButton, checked, disabled}) => {
+const Checkbox = ({
+  message,
+  handleOnChange,
+  checkboxName,
+  checkboxValue,
+  reference,
+  radioButton,
+  checked,
+  disabled,
+}) => {
   const checkboxControlclassName = className('checkbox__control', {
-    radioButton
+    radioButton,
   });
 
   return (
     <>
       <label className="checkbox">
         <span className="checkbox__input">
-          <input 
-            onChange={handleOnChange} 
-            type="checkbox" 
+          <input
+            onChange={handleOnChange}
+            type="checkbox"
             name={checkboxName}
             value={checkboxValue}
             ref={reference}
