@@ -1,0 +1,27 @@
+@import "../index.scss";
+
+.answer {
+  display: flex;
+}
+
+.answer__image {
+  width: 493px;
+  height: 641px;
+  background: #c4c4c4;
+}
+
+.answer__content {
+  margin-left: 87px;
+  font-family: $IBM-font;
+  color: #000000;
+  h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 65px;
+  }
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+  }
+}

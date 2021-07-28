@@ -10,6 +10,8 @@ import QuestionPage1 from '../containers/QuestionPage1';
 import QuestionPage2 from '../containers/QuestionPage2';
 import TransitionPage from '../containers/TransitionPage';
 import RealAnswerPage from '../containers/RealAnswerPage';
+import PeopleAnswerPage from '../containers/PeopleAnswerPage';
+
 // Transition Styles
 import '../styles/components/slideTransition.scss';
 
@@ -67,6 +69,7 @@ const App = () => {
               <Route exact path="/question-2" component={QuestionPage2} />
               <Route exact path="/transition-page" component={TransitionPage} />
               <Route exact path="/real-answer" component={RealAnswerPage} />
+              <Route exact path="/people-answer" component={PeopleAnswerPage} />
             </Switch>
           </div>
         </CSSTransition>

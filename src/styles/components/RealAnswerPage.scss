@@ -7,18 +7,24 @@
 }
 
 .realanswer__content {
-  z-index: 10;
   height: 100vh;
   background: #ffbb70;
   border-radius: 0px 323px 0px 0px;
 }
 
-.realanswer__title {
-  margin: 0;
-  text-align: center;
-  padding-top: 194px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 65px;
-  line-height: 94px;
+.realanswer__more {
+  width: 100%;
+  position: absolute;
+  top: 78%;
+  p {
+    font-size: 35px;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    color: #058c7c;
+  }
+  .realanswer__more--action {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }

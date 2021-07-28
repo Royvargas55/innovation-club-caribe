@@ -1,0 +1,50 @@
+.carousel {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel__right__arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.carousel__left__arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.carousel__right__arrow__button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.carousel__item active {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.carousel__item active.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

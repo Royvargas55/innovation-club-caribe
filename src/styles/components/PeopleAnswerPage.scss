@@ -1,0 +1,13 @@
+@import "../index.scss";
+
+.peopleanswer {
+  height: 100vh;
+  font-family: $IBM-font;
+  background: #058c7c;
+  text-align: center;
+  h1 {
+    color: white;
+    margin: 0;
+    padding-top: 30px;
+  }
+}
