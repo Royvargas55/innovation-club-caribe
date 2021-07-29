@@ -1,13 +1,17 @@
 import React from 'react';
 
+// Components
+import Navbar from '../components/Navbar';
+
 // Styles
 import '../styles/components/PeopleAnswerPage.scss';
 
-const PeopleAnswerPage = () => {
+const PeopleAnswerPage = ({ children }) => {
     return (
         <>  
             <div className='peopleanswer pageDown'>
-                <h1>People Answer Page</h1>
+                <Navbar />
+                {children}
             </div>
         </>
     );

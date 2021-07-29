@@ -18,7 +18,7 @@ const RealAnswerPage = () => {
                 <div className='realanswer__more'>
                     <p>Conocer las respuestas de los demás</p>
                     <div className='realanswer__more--action'>
-                        <Link to='/people-answer'><ArrowBottomSVG /></Link>
+                        <Link to='/people-answer/questions'><ArrowBottomSVG /></Link>
                     </div>
                 </div>
             </div>
