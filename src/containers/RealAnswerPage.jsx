@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Components
-import { Carousel, mockData } from '../components/Carousel';
+import { Carousel } from '../components/Carousel';
 import ArrowBottomSVG from '../components/Arrow/ArrowBottomSVG';
+
+// Questions Data
+import { QuestionData } from '../assets/QuestionData';
 
 // Styles
 import '../styles/components/RealAnswerPage.scss';
@@ -13,7 +16,7 @@ const RealAnswerPage = () => {
         <>  
             <div className='realanswer page pageDown'>
                 <div className='realanswer__content'>
-                    <Carousel questions={mockData} />
+                    <Carousel questions={QuestionData} space/>
                 </div>
                 <div className='realanswer__more'>
                     <p>Conocer las respuestas de los demás</p>

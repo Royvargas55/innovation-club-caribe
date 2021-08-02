@@ -1,0 +1,17 @@
+@import "../index.scss";
+
+.noallowed {
+  height: 100vh;
+  background: #ffbb70;
+  h1 {
+    margin: 0;
+    padding-top: 30%;
+    font-family: $IBM-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    color: #000000;
+  }
+}

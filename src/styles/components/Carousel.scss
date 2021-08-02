@@ -1,9 +1,13 @@
 .carousel {
   position: relative;
-  height: 85vh;
+  height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.space {
+  padding-top: 100px;
 }
 
 .carousel__right__arrow {

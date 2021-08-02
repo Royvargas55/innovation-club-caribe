@@ -14,6 +14,7 @@ import PeopleAnswerPage from '../containers/PeopleAnswerPage';
 import PeopleAnswerQuestionsPage from '../containers/PeopleAnswerQuestionsPage';
 import PeopleAnswerEntrepreneurshipsPage from '../containers/PeopleAnswerEntrepreneurshipsPage';
 import PeopleAnswerSelloPage from '../containers/PeopleAnswerSelloPage';
+import NoAllowedPage from '../containers/NoAllowedPage';
 
 // Transition Styles
 import '../styles/components/slideTransition.scss';
@@ -39,15 +40,31 @@ const getPathDepth = (location) => {
 const App = () => {
   
   const location = useLocation();
+  const platform = navigator.platform;
+  const breakpoint = 1440;
 
   const [prevDepth, setPrevDepth] = useState(getPathDepth(location));
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth);
 
   useEffect(() => {
     setPrevDepth(location);
+    window.addEventListener("resize", () => setIsDesktop(window.innerWidth));
   }, [prevDepth]);
 
   const currentKey = location.pathname.split("/")[1] || "/";
   const timeout = { enter: 800, exit: 400 };
+
+  if(!(platform.includes("Win") || platform.includes("Mac"))) {
+    return (
+      <NoAllowedPage />
+    )
+  }
+
+  if(isDesktop < breakpoint) {
+    return (
+      <NoAllowedPage />
+    )
+  }
 
   return (
       <TransitionGroup component='div' className='app'>
