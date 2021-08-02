@@ -1,0 +1,59 @@
+@import "../index.scss";
+
+.final {
+  font-family: $IBM-font;
+  .final__title {
+    display: flex;
+    padding: 100px 0 0 110px;
+    .final__title__rect {
+      width: 23px;
+      height: 85px;
+      background: #5fc6cc;
+    }
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 76px;
+      line-height: 23px;
+      padding-left: 22px;
+    }
+  }
+  .final__subtitle {
+    p {
+      padding: 21px 0 0 110px;
+      text-align: left;
+      width: 1296px;
+      height: 124px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 62px;
+      color: #ffffff;
+    }
+  }
+  .final__confirm {
+    display: flex;
+    padding: 20px 0 0 110px;
+    button {
+      margin-left: 20px;
+    }
+  }
+  .final__footer {
+    display: flex;
+    padding: 30px 0 0 110px;
+    p {
+      width: 465px;
+      text-align: left;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      color: #ffffff;
+    }
+    img {
+      width: 425px;
+      height: 142px;
+      padding-top: 45px;
+      margin-left: 820px;
+    }
+  }
+}
