@@ -6,8 +6,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './styles/index.scss';
 
 ReactDOM.render(
-    <Router>
-        <App />
-    </Router>, 
-    document.getElementById('app')
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('app')
 );

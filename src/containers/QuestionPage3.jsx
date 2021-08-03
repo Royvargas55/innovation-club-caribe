@@ -9,16 +9,15 @@ import BeachSVG from '../components/BeachSVG';
 
 // Styles
 import '../styles/components/QuestionPage1.scss';
-
 let db = firebase.firestore();
 
-const QuestionPage1 = () => {
+const QuestionPage3 = () => {
   const inputAnswer = useRef(null);
 
   const handleClick = () => {
     db.collection('preguntas')
       .add({
-        pregunta: 0,
+        pregunta: 2,
         respuesta: inputAnswer.current.value,
       })
       .then(() => console.log('done'));
@@ -28,11 +27,10 @@ const QuestionPage1 = () => {
     <>
       <div className="question page">
         <div className="question__number">
-          <QuestionNumber number="1" />
+          <QuestionNumber number="3" />
         </div>
         <h1 className="question__title">
-          ¿Por qué se celebra el Día del Negro y la Cultura Afrocostarricense el
-          31 de agosto?
+          Mencione 2 instrumentos musicales de Origen Afrodescendiente
         </h1>
         <div className="question__input">
           <Input
@@ -41,7 +39,7 @@ const QuestionPage1 = () => {
             centerPlaceholder
           />
         </div>
-        <Link to="/question-2">
+        <Link to="/question-4">
           <Button method={handleClick} text="Continuar"></Button>
         </Link>
       </div>
@@ -50,4 +48,4 @@ const QuestionPage1 = () => {
   );
 };
 
-export default QuestionPage1;
+export default QuestionPage3;

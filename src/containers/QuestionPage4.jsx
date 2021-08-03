@@ -12,13 +12,13 @@ import '../styles/components/QuestionPage1.scss';
 
 let db = firebase.firestore();
 
-const QuestionPage1 = () => {
+const QuestionPage4 = () => {
   const inputAnswer = useRef(null);
 
   const handleClick = () => {
     db.collection('preguntas')
       .add({
-        pregunta: 0,
+        pregunta: 3,
         respuesta: inputAnswer.current.value,
       })
       .then(() => console.log('done'));
@@ -28,11 +28,11 @@ const QuestionPage1 = () => {
     <>
       <div className="question page">
         <div className="question__number">
-          <QuestionNumber number="1" />
+          <QuestionNumber number="4" />
         </div>
         <h1 className="question__title">
-          ¿Por qué se celebra el Día del Negro y la Cultura Afrocostarricense el
-          31 de agosto?
+          ¿Cuáles son algunas de las bebidas típicas de la cultura
+          afrocostarricense?
         </h1>
         <div className="question__input">
           <Input
@@ -41,7 +41,7 @@ const QuestionPage1 = () => {
             centerPlaceholder
           />
         </div>
-        <Link to="/question-2">
+        <Link to="/question-5">
           <Button method={handleClick} text="Continuar"></Button>
         </Link>
       </div>
@@ -50,4 +50,4 @@ const QuestionPage1 = () => {
   );
 };
 
-export default QuestionPage1;
+export default QuestionPage4;

@@ -22,6 +22,7 @@ const QuestionPage2 = () => {
 
   const arrLength = 4;
   const checkbox = useRef([]);
+
   let db = firebase.firestore();
 
   if (checkbox.current.length !== arrLength) {
@@ -34,7 +35,7 @@ const QuestionPage2 = () => {
   const handleClick = () => {
     db.collection('preguntas')
       .add({
-        pregunta: 1,
+        pregunta: 8,
         respuesta: checkboxValue,
       })
       .then(() => console.log('done'));
@@ -49,18 +50,20 @@ const QuestionPage2 = () => {
       },
     }));
   };
-
-  let answerArray = ['Pan Bon', 'Rondón', 'Patí', 'Patacón'];
-
+  let answerArray = [
+    'Comité Cívico Cultura Étnico Negro',
+    'Comité Cultural de Celebraciones',
+    'CCCDNCACR',
+  ];
   return (
     <>
       <div className="question page">
         <div className="question__number">
-          <QuestionNumber number="2" />
+          <QuestionNumber number="9" />
         </div>
         <h1 className="question__title">
-          Consiste en un pastel de repostería relleno de carne, especias y chile
-          panameño (picante). A que hace referencia lo anterior.
+          ¿Cuál es el nombre del comité que tuvo la iniciativa de la celebración
+          del Día del Negro y la Cultura Afrocostarricense?
         </h1>
         <div className="question__radiobuttons">
           {answerArray.map((_element, index) => (
@@ -77,7 +80,7 @@ const QuestionPage2 = () => {
             />
           ))}
         </div>
-        <Link to="/question-3">
+        <Link to="/question-10">
           <Button method={handleClick} text="Continuar"></Button>
         </Link>
       </div>

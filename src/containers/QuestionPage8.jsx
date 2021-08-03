@@ -34,7 +34,7 @@ const QuestionPage2 = () => {
   const handleClick = () => {
     db.collection('preguntas')
       .add({
-        pregunta: 1,
+        pregunta: 7,
         respuesta: checkboxValue,
       })
       .then(() => console.log('done'));
@@ -50,17 +50,16 @@ const QuestionPage2 = () => {
     }));
   };
 
-  let answerArray = ['Pan Bon', 'Rondón', 'Patí', 'Patacón'];
+  let answerArray = ['2 de Julio', '31 de Agosto', '25 de Septiembre'];
 
   return (
     <>
       <div className="question page">
         <div className="question__number">
-          <QuestionNumber number="2" />
+          <QuestionNumber number="8" />
         </div>
         <h1 className="question__title">
-          Consiste en un pastel de repostería relleno de carne, especias y chile
-          panameño (picante). A que hace referencia lo anterior.
+          ¿Cuándo se celebra el Día del Negro y la Cultura Afrocostarricense?
         </h1>
         <div className="question__radiobuttons">
           {answerArray.map((_element, index) => (
@@ -77,7 +76,7 @@ const QuestionPage2 = () => {
             />
           ))}
         </div>
-        <Link to="/question-3">
+        <Link to="/question-9">
           <Button method={handleClick} text="Continuar"></Button>
         </Link>
       </div>

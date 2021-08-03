@@ -18,10 +18,10 @@ const DataPage = () => {
   const { setLocalStorage } = useLocalStorage('student', {});
   const inputId = useRef('');
   const inputName = useRef('');
+  let db = firebase.firestore();
 
   const onChangeValue = (e) => {
     setScholarship(e.target.value);
-    console.log(e.target.value);
   };
 
   const handleClick = () => {
@@ -31,6 +31,9 @@ const DataPage = () => {
       scholarship: scholarship,
     };
     setLocalStorage(student);
+    db.collection('data')
+      .add(student)
+      .then((docRef) => console.log('Done'));
   };
 
   const onChange = () => {
@@ -50,17 +53,19 @@ const DataPage = () => {
             <Input reference={inputName} placeholder="Tu respuesta..." />
           </div>
           <div className="data__form__group">
-            <h1 className="data__form__group__title">
-              ¿A qué grupo perteneces?
-            </h1>
-            <SelectionBoxes handleChangeValue={onChangeValue} />
-            <div className="data__form__group__checkbox">
-              <Checkbox
-                handleOnChange={onChange}
-                message="Estoy de acuerdo con la política de uso de datos"
-                checkboxName="agreements"
-                checkboxValue="agree"
-              />
+            <div>
+              <h1 className="data__form__group__title">
+                ¿A qué grupo perteneces?
+              </h1>
+              <SelectionBoxes handleChangeValue={onChangeValue} />
+              <div className="data__form__group__checkbox">
+                <Checkbox
+                  handleOnChange={onChange}
+                  message="Estoy de acuerdo con la política de uso de datos de ULACIT"
+                  checkboxName="agreements"
+                  checkboxValue="agree"
+                />
+              </div>
             </div>
           </div>
         </div>

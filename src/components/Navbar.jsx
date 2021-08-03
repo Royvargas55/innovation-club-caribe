@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Components
-import CommunicationSVG from "./CommunicationSVG";
-import IdeaSVG from "./IdeaSVG";
-import SelloAzulSVG from "./SelloAzulSVG";
+import CommunicationSVG from './CommunicationSVG';
+import IdeaSVG from './IdeaSVG';
+import SelloAzulSVG from './SelloAzulSVG';
 
 // Styles
-import "../styles/components/Navbar.scss";
+import '../styles/components/Navbar.scss';
 
 const Navbar = () => {
   return (
@@ -15,19 +15,19 @@ const Navbar = () => {
       <nav className="navbar">
         <ul className="navbar__ul">
           <div>
-            <Link to="/people-answer/questions">
+            <Link>
               <CommunicationSVG />
               <li>Pregunta</li>
             </Link>
           </div>
           <div>
-            <Link to="/people-answer/entrepreneurships">
+            <Link>
               <IdeaSVG />
               <li>Emprendimientos</li>
             </Link>
           </div>
           <div>
-            <Link to="/people-answer/sello-azul">
+            <Link>
               <SelloAzulSVG />
               <li>Sello Azul</li>
             </Link>
