@@ -1,0 +1,32 @@
+@import "../index.scss";
+
+a,
+u {
+  text-decoration: none;
+}
+
+.entrepreneurship__card {
+  border-top: 5px solid #5fc6cc;
+  border-bottom: 5px solid #5fc6cc;
+  display: flex;
+  width: 704px;
+  height: 133px;
+  background: #49a7ad;
+  font-family: $IBM-font;
+  img {
+    margin: 17px 33px 0 132px;
+    overflow: hidden;
+    object-fit: cover;
+    width: 82px;
+    height: 84px;
+    border-radius: 15px;
+  }
+  h1 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #000000;
+  }
+}

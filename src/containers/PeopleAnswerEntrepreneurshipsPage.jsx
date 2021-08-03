@@ -1,9 +1,12 @@
 import React from 'react';
 
+// Components
+import ListOfEntrepreneurship from '../components/ListOfEntrepreneurship';
+
 const PeopleAnswerEntrepreneurshipsPage = () => {
     return (
         <div>
-            <h1>Emprendimientos</h1>
+            <ListOfEntrepreneurship />
         </div>
     );
 };
