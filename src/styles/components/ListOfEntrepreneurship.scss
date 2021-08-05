@@ -1,4 +1,5 @@
 .entrepreneurship__list {
+  width: 704px;
   height: 100vh;
   overflow: scroll;
   direction: rtl;
@@ -29,5 +30,8 @@
   li {
     direction: ltr;
     padding: 0 8px;
+    &:last-child {
+      margin-bottom: 200px;
+    }
   }
 }

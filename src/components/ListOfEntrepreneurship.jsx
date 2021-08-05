@@ -6,13 +6,16 @@ import EntrepreneurshipCard from './EntrepreneurshipCard';
 // Styles
 import '../styles/components/ListOfEntrepreneurship.scss';
 
+// Data
+import { EntrepreneurshipsData } from '../assets/EntrepreneurshipsData'; 
+
 const ListOfEntrepreneurship = () => {
     return (
         <>
             <ul className='entrepreneurship__list'>
-                {[1,2,3,4,5,6,7,8,9,10].map(entrepreneurship => (
-                    <li>
-                        <EntrepreneurshipCard path={`/people-answer/entrepreneurships`} />
+                {EntrepreneurshipsData.map(entrepreneurship => (
+                    <li key={entrepreneurship.id}>
+                        <EntrepreneurshipCard cover={entrepreneurship.cover} name={entrepreneurship.name} path={`/people-answer/entrepreneurships/${entrepreneurship.id}`} />
                     </li>
                 ))}
             </ul> 

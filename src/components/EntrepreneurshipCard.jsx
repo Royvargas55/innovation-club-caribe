@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 // Styles
 import '../styles/components/EntrepreneurshipCard.scss';
 
-const DEFAULT_IMAGE = 'https://i.imgur.com/dJa0Hpl.jpg'
 
-const EntrepreneurshipCard = ({cover = DEFAULT_IMAGE, name = 'Emprendimiento', path}) => {
+const EntrepreneurshipCard = ({cover, name, path}) => {
     return (
         <>
         <Link to={path}>

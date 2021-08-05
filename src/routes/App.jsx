@@ -92,6 +92,7 @@ const App = () => {
               <PeopleAnswerPage>
                 <Route exact path="/people-answer/questions" component={PeopleAnswerQuestionsPage} />
                 <Route exact path="/people-answer/entrepreneurships" component={PeopleAnswerEntrepreneurshipsPage} />
+                <Route exact path="/people-answer/entrepreneurships/:id" component={PeopleAnswerEntrepreneurshipsPage} />
                 <Route exact path="/people-answer/sello-azul" component={PeopleAnswerSelloPage} />
               </PeopleAnswerPage>
             </Switch>
