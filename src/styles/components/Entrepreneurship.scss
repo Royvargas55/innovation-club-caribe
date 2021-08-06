@@ -1,0 +1,86 @@
+@import '../index.scss';
+
+.entrepreneurship {
+  height: 80vh;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: center;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, #6b6b6b, #6b6b6b), #6b6b6b;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  background: #ddefff;
+  font-family: $IBM-font;
+  .entrepreneurship__title {
+    margin-top: 45px;
+    img {
+      width: 164px;
+      height: 168px;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+    h1 {
+      margin-bottom: 30px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 54px;
+      line-height: 83px;
+      text-align: center;
+      color: #000000;
+    }
+  }
+  .entrepreneurship__description {
+    .entrepreneurship__description__center {
+      padding: 0 87px 0 196px;
+      p {
+        text-align: left;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        color: #000000;
+      }
+    }
+    .entrepreneurship__description__social {
+      width: fit-content;
+      display: grid;
+      grid-template-columns: auto auto;
+      margin: 0 auto;
+      h2 {
+        font-style: italic;
+        font-weight: normal;
+        font-size: 34px;
+        line-height: 52px;
+        cursor: pointer;
+        text-align: center;
+        color: #2dab87;
+      }
+      svg {
+        padding-top: 38px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .entrepreneurship__button {
+    margin-bottom: 45px;
+  }
+}

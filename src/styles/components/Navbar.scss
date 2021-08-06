@@ -1,32 +1,39 @@
 @import "../index.scss";
 
+@mixin item {
+  font-family: $IBM-font;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 47px;
+  text-align: center;
+  padding: 18px 0;
+  text-decoration: none;
+}
+
 .navbar__ul {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: #2dab87;
-  div {
+  .navbar__ul__item {
     padding-top: 18px;
     width: 33.33%;
-    a {
-      font-family: $IBM-font;
-      font-weight: 500;
-      font-size: 36px;
-      line-height: 47px;
+    li {
+      @include item;
       color: white;
-      text-align: center;
-      padding: 18px 0;
-      text-decoration: none;
     }
-    &:hover {
-      a {
-        color: black;
-      }
-      .icon {
-        fill: black;
-      }
-      background-color: #28ebb3;
+  }
+  .navbar__ul__item__selected {
+    padding-top: 18px;
+    width: 33.33%;
+    background-color: #28ebb3;
+    li {
+      @include item;
+      color: black;
+    }
+    .icon {
+      fill: black;
     }
   }
 }

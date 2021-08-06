@@ -1,4 +1,4 @@
-@import "../index.scss";
+@import '../index.scss';
 
 .answer {
   display: flex;
@@ -7,7 +7,11 @@
 .answer__image {
   width: 493px;
   height: 641px;
-  background: #c4c4c4;
+  display: grid;
+  align-content: center;
+  img {
+    width: 100%;
+  }
 }
 
 .answer__content {
@@ -17,11 +21,13 @@
   h1 {
     margin: 0;
     font-weight: bold;
-    font-size: 65px;
+    font-size: 36px;
+    max-width: 750px;
   }
   p {
     font-style: normal;
     font-weight: normal;
-    font-size: 42px;
+    font-size: 26px;
+    max-width: 750px;
   }
 }

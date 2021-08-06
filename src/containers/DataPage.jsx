@@ -29,11 +29,9 @@ const DataPage = () => {
       id: inputId.current.value,
       name: inputName.current.value,
       scholarship: scholarship,
+      mail: null,
     };
     setLocalStorage(student);
-    db.collection('data')
-      .add(student)
-      .then((docRef) => console.log('Done'));
   };
 
   const onChange = () => {

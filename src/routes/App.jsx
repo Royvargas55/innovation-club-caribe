@@ -73,6 +73,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/video" component={Video} />
         <Route exact path="/data-page" component={DataPage} />
+
         <Route exact path="/question-1" component={QuestionPage1} />
         <Route exact path="/question-2" component={QuestionPage2} />
         <Route exact path="/question-3" component={QuestionPage3} />
@@ -85,6 +86,7 @@ const App = () => {
         <Route exact path="/question-10" component={QuestionPage10} />
         <Route exact path="/transition-page" component={TransitionPage} />
         <Route exact path="/real-answer" component={RealAnswerPage} />
+
         <PeopleAnswerPage>
           <Route
             exact
@@ -94,6 +96,11 @@ const App = () => {
           <Route
             exact
             path="/people-answer/entrepreneurships"
+            component={PeopleAnswerEntrepreneurshipsPage}
+          />
+          <Route
+            exact
+            path="/people-answer/entrepreneurships/:id"
             component={PeopleAnswerEntrepreneurshipsPage}
           />
           <Route
