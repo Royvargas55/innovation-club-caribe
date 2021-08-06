@@ -1,4 +1,4 @@
-@import "../index.scss";
+@import '../index.scss';
 
 .peopleanswer__item {
   font-family: $IBM-font;
@@ -13,6 +13,7 @@
   p {
     font-style: italic;
     font-weight: 300;
+    padding: 10px 150px;
     font-size: 48px;
     line-height: 62px;
     color: #000000;

@@ -18,7 +18,7 @@ const QuestionPage6 = () => {
   const handleClick = () => {
     db.collection('preguntas')
       .add({
-        pregunta: 4,
+        pregunta: 5,
         respuesta: inputAnswer.current.value,
       })
       .then(() => console.log('done'));
