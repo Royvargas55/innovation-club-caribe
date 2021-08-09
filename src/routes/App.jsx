@@ -86,7 +86,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-1" component={QuestionPage1}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -95,7 +94,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-2" component={QuestionPage2}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -104,7 +102,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-3" component={QuestionPage3}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -113,7 +110,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-4" component={QuestionPage4}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -122,7 +118,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-5" component={QuestionPage5}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -131,7 +126,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-6" component={QuestionPage6}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -140,7 +134,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-7" component={QuestionPage7}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -149,7 +142,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-8" component={QuestionPage8}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -158,7 +150,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-9" component={QuestionPage9}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
@@ -167,7 +158,6 @@ const App = () => {
         </Route>
 
         <Route exact path="/question-10" component={QuestionPage10}>
-          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
           {person_object?.mail != null ? (
             <Redirect to="/people-answer/sello-azul"></Redirect>
           ) : (
