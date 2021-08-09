@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import CommunicationSVG from './CommunicationSVG';
 import IdeaSVG from './IdeaSVG';
 import SelloAzulSVG from './SelloAzulSVG';
+import TurtleSVG from '../components/TurtleSVG';
 
 // Styles
 import '../styles/components/Navbar.scss';
@@ -19,6 +20,7 @@ const Navbar = () => {
 
   return (
     <>
+      {location.pathname.includes(ROUTE_QUESTIONS) ? <TurtleSVG /> : ''}
       <nav className="navbar">
         <ul className="navbar__ul">
           <div

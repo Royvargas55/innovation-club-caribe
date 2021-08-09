@@ -1,5 +1,10 @@
-@import "../index.scss";
+@import '../index.scss';
 
+.turtle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 @mixin item {
   font-family: $IBM-font;
   font-weight: 500;

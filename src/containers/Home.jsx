@@ -21,11 +21,15 @@ const Home = () => {
           <h2 className="home__title__date">31 de agosto</h2>
           <h1 className="home__title__day">Día de la</h1>
           <h1 className="home__title__day">Cultura Afrocostarricense</h1>
+          <br />
         </div>
         <div className="home__button">
           <Link to="/video">
             <Button text="Comencemos" method={handleClick}></Button>
           </Link>
+          <span className="home__title__by">
+            <i>Por el Innovation Club</i>
+          </span>
         </div>
       </div>
     </div>

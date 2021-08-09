@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
+import { Redirect } from 'react-router';
 // Components
 import Home from '../containers/Home';
 import Video from '../containers/Video';
@@ -67,47 +68,153 @@ const App = () => {
     return <NoAllowedPage />;
   }
 
+  const person_object = JSON.parse(window.localStorage.getItem('student'));
+  console.log(person_object);
   return (
     <div className={getPathDepth(location) - prevDepth >= 0 ? 'left' : 'right'}>
       <Switch location={location}>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/video" component={Video} />
-        <Route exact path="/data-page" component={DataPage} />
+        <Route exact path="/" component={Home}></Route>
 
-        <Route exact path="/question-1" component={QuestionPage1} />
-        <Route exact path="/question-2" component={QuestionPage2} />
-        <Route exact path="/question-3" component={QuestionPage3} />
-        <Route exact path="/question-4" component={QuestionPage4} />
-        <Route exact path="/question-5" component={QuestionPage5} />
-        <Route exact path="/question-6" component={QuestionPage6} />
-        <Route exact path="/question-7" component={QuestionPage7} />
-        <Route exact path="/question-8" component={QuestionPage8} />
-        <Route exact path="/question-9" component={QuestionPage9} />
-        <Route exact path="/question-10" component={QuestionPage10} />
-        <Route exact path="/transition-page" component={TransitionPage} />
-        <Route exact path="/real-answer" component={RealAnswerPage} />
+        <Route exact path="/video" component={Video}></Route>
+
+        <Route exact path="/data-page" component={DataPage}>
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-1" component={QuestionPage1}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-2" component={QuestionPage2}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-3" component={QuestionPage3}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-4" component={QuestionPage4}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-5" component={QuestionPage5}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-6" component={QuestionPage6}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-7" component={QuestionPage7}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-8" component={QuestionPage8}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-9" component={QuestionPage9}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/question-10" component={QuestionPage10}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+          {person_object?.mail != null ? (
+            <Redirect to="/people-answer/sello-azul"></Redirect>
+          ) : (
+            ''
+          )}
+        </Route>
+
+        <Route exact path="/transition-page" component={TransitionPage}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+        </Route>
+
+        <Route exact path="/real-answer" component={RealAnswerPage}>
+          {person_object == null ? <Redirect to="/data-page"></Redirect> : ''}
+        </Route>
 
         <PeopleAnswerPage>
           <Route
             exact
             path="/people-answer/questions"
             component={PeopleAnswerQuestionsPage}
-          />
+          >
+            {person_object == null ? <Redirect to="/"></Redirect> : ''}
+          </Route>
+
           <Route
             exact
             path="/people-answer/entrepreneurships"
             component={PeopleAnswerEntrepreneurshipsPage}
-          />
+          >
+            {person_object == null ? <Redirect to="/"></Redirect> : ''}
+          </Route>
+
           <Route
             exact
             path="/people-answer/entrepreneurships/:id"
             component={PeopleAnswerEntrepreneurshipsPage}
-          />
+          >
+            {person_object == null ? <Redirect to="/"></Redirect> : ''}
+          </Route>
+
           <Route
             exact
             path="/people-answer/sello-azul"
             component={PeopleAnswerSelloPage}
-          />
+          >
+            {person_object == null ? <Redirect to="/"></Redirect> : ''}
+          </Route>
         </PeopleAnswerPage>
       </Switch>
     </div>
