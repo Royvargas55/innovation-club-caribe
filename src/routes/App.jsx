@@ -47,7 +47,7 @@ const getPathDepth = (location) => {
 const App = () => {
   const location = useLocation();
   const platform = navigator.platform;
-  const breakpoint = 1460;
+  const breakpoint = 1200;
 
   const [prevDepth, setPrevDepth] = useState(getPathDepth(location));
   const [isDesktop, setIsDesktop] = useState(window.innerWidth);

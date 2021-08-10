@@ -67,7 +67,7 @@ const PeopleAnswerSelloPage = () => {
         )}
         <footer className="final__footer">
           <p>
-            Programador por:
+            Programado por:
             <br />
             Karl Aase
             <br />
